@@ -1,0 +1,26 @@
+This program simulates a 2D canvas and draws various 2D shapes.
+Please run make hw1 to compile the latest updated implementation using the arrays data structure(besides the outer Linked List required) and stores all the points in circle and polygon into an array inside the corresponding struct, advised by Professor Dianna Xu during the discussion about program efficiency.
+
+The program draws in the following mode: [As the sample demo program behaves, my program can draw in multiple ways, including pressing and dragging.]
+ • F1: line mode: a) pressed and release mouse at 2 positions b) press and drag the mouse to another position and then release c) press and release at the 1st position, then drag and release at the 2nd position
+ • F2: triangle mode
+ • F3: rectangle mode
+ • F4: circle mode: press and release mouse for the center of the circle and click or drag to find the 2nd point on the circle and control the radius.
+ • F5: polygon mode: makes use of stencil test algorithms to achieve all types of polygons, including convex, concave and even non-simple polygons. However, the non-simple polygons, like the crossing star can not be fully filled in my implementation.
+
+In addition, this program accept the following commands for multiple functionalities:
+ • f: toggles fill mode
+ • r: toggles drawing color red/black
+ • g: toggles drawing color green/black
+ • b: toggles drawing color blue/black
+ • c: clears screen
+ • q/Q/escape: quits program
+
+Special implementation:
+If user changes mode while drawing in a particular mode, I decided to clear the partial completed shape and prompt the user to start over in the new mode. As for the toggle fill mode and color mode, I would apply the latest color/fill mode in drawing.
+
+This program doesn't have any memory leaks except some Still Reachable in valgrind.
+
+Internet References:
+Circle Algorithms: https://gist.github.com/strife25/803118
+Polygon Stencil Test Algorithm for filling concave/non-simple polygons: https://www.opengl.org/discussion_boards/showthread.php/165547-Stencil-test-problem
